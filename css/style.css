@@ -4,6 +4,7 @@
  */
 
 body {
+    background-attachment: fixed;
     background-image: url("../assets/ee-building.jpg");
     background-size: cover;
 }
@@ -36,8 +37,41 @@ header h1 {
     font-weight: bold;
 }
 
-.about {
-    background-color: black;
+.about-ieee {
+    background-color: rgba(0, 102, 161, 0.9);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-ieee h2, .about-rutgers-ieee h2, .about-ieee p, .about-rutgers-ieee p,
+.eboard h2, .eboard p {
     color: white;
     font-family: "Droid Sans";
+}
+
+.about-ieee p, .about-rutgers-ieee p, .eboard p {
+    font-size: 20px;
+}
+
+.about-rutgers-ieee {
+    background-color: rgba(95, 106, 114, 0.9);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.eboard {
+    background-color: rgba(0, 102, 161, 0.9);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.eboard img {
+    width: 250px;
+    height: 250px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
 }
