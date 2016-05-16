@@ -1,0 +1,43 @@
+/* style.css
+ * Author: Jeremy Savarin
+ * Custom stylesheet
+ */
+
+body {
+    background-image: url("../assets/ee-building.jpg");
+    background-size: cover;
+}
+
+.navbar .nav > li > a {
+    color: white;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-family: "Droid Sans";
+    font-size: 20px;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 30px;
+}
+
+header {
+    padding-top: 300px;
+    padding-bottom: 300px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-family: "Droid Sans";
+    font-weight: bold;
+}
+
+.about {
+    background-color: black;
+    color: white;
+    font-family: "Droid Sans";
+}
