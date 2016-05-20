@@ -3,7 +3,14 @@
  * Custom stylesheet
  */
 
+ /* Fade-in animation */
+@keyframes fadeIn {
+    from {opacity: 0;background-color: black;}
+    to {opacity: 1;}
+}
+
 body {
+    animation: fadeIn 4s;
     background-attachment: fixed;
     background-image: url("../assets/ee-building.jpg");
     background-size: cover;
@@ -18,6 +25,7 @@ body {
     border: none;
     font-family: "Droid Sans";
     font-size: 20px;
+    text-shadow: 2px 2px black;
 }
 
 .navbar .navbar-brand {
@@ -35,32 +43,47 @@ header h1 {
     color: white;
     font-family: "Droid Sans";
     font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px black;
 }
 
-.about-ieee {
-    background-color: rgba(0, 102, 161, 0.9);
+.about {
+    background-color: #00626d;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.about-ieee h2, .about-rutgers-ieee h2, .about-ieee p, .about-rutgers-ieee p,
-.eboard h2, .eboard p {
+.about h2, .about p, .eboard h2, .eboard p, .contact h1, .contact h2, .contact p {
     color: white;
     font-family: "Droid Sans";
 }
 
-.about-ieee p, .about-rutgers-ieee p, .eboard p {
-    font-size: 20px;
+.about-ieee h2, .about-rutgers-ieee h2, .eboard h2, .contact h2 {
+    font-size: 40px;
 }
 
-.about-rutgers-ieee {
-    background-color: rgba(95, 106, 114, 0.9);
-    padding-top: 50px;
-    padding-bottom: 50px;
+.about-ieee p, .eboard p {
+    font-size: 20px;
+    text-align: left;
+}
+
+.contact h1 {
+    text-align: left;
+}
+
+.ieee-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-rutgers-ieee p, .contact p {
+    font-size: 15px;
+    text-align: left;
 }
 
 .eboard {
-    background-color: rgba(0, 102, 161, 0.9);
+    background-color: rgba(0, 102, 161, 1);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -70,8 +93,18 @@ header h1 {
     height: 250px;
 }
 
-footer {
+.contact {
+    background-color:  #00626d;
+    padding-top: 10px;
+}
+
+.copyright {
     background: black;
     color: white;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.copyright p {
+    text-align: center;
 }
