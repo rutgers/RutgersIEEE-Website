@@ -3,14 +3,21 @@
  * Custom stylesheet
  */
 
- /* Fade-in animation */
+
+/* Fade-in animation */
+
 @keyframes fadeIn {
-    from {opacity: 0;background-color: black;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+        background-color: black;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 body {
-    animation: fadeIn 4s;
+    animation: fadeIn 3s;
     background-attachment: fixed;
     background-image: url("../assets/ee-building.jpg");
     background-size: cover;
@@ -26,6 +33,12 @@ body {
     font-family: "Droid Sans";
     font-size: 20px;
     text-shadow: 2px 2px black;
+    transition: background-color 1s ease 0s;
+}
+
+.navbar.opaque {
+    background-color: black;
+    transition: background-color 1s ease 0s;
 }
 
 .navbar .navbar-brand {
@@ -40,35 +53,59 @@ header {
 }
 
 header h1 {
-    color: white;
-    font-family: "Droid Sans";
     font-weight: bold;
     font-size: 50px;
     text-shadow: 2px 2px black;
 }
 
-.about {
+.about-ieee {
     background-color: #00626d;
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
-.about h2, .about p, .eboard h2, .eboard p, .contact h1, .contact h2, .contact p {
+.about-ieee img, .about-rutgers-ieee img {
+    max-width: 100%;
+}
+
+.about-rutgers-ieee {
+    background-color: #c1bbab;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+header h1,
+.about-ieee h2,
+.about-ieee p,
+.about-rutgers-ieee h2,
+.about-rutgers-ieee p,
+.eboard h2,
+.eboard p,
+.contact h1,
+.contact h2,
+.contact h3,
+.contact p {
     color: white;
     font-family: "Droid Sans";
 }
 
-.about-ieee h2, .about-rutgers-ieee h2, .eboard h2, .contact h2 {
+.about-ieee h2,
+.about-rutgers-ieee h2,
+.eboard h2,
+.contact h2 {
     font-size: 40px;
 }
 
-.about-ieee p, .eboard p {
+.about-ieee p,
+.eboard p {
     font-size: 20px;
     text-align: left;
 }
 
-.contact h1 {
-    text-align: left;
+.contact h3 {
+    weight: bold;
 }
 
 .ieee-logo {
@@ -77,32 +114,34 @@ header h1 {
     margin-right: auto;
 }
 
-.about-rutgers-ieee p, .contact p {
+.about-rutgers-ieee p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.contact p {
     font-size: 15px;
     text-align: left;
 }
 
 .eboard {
-    background-color: rgba(0, 102, 161, 1);
+    background-color: rgb(0, 102, 161);
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .eboard img {
-    width: 250px;
-    height: 250px;
 }
 
 .contact {
-    background-color:  #00626d;
+    background-color: #00626d;
     padding-top: 10px;
 }
 
 .copyright {
     background: black;
     color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .copyright p {

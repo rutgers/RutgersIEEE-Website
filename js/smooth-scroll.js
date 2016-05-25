@@ -8,7 +8,14 @@ $("#navbar ul li a[href^='#']").on('click', function(event) {
     var hash = this.hash;
 
     $("html, body").animate({
-        scrollTop: $(hash).offset().top}, 500, function() {
-            window.location.hash = hash;
-    });
+        scrollTop: $(hash).offset().top},
+        'slow');
+});
+
+$(window).scroll(function() {
+    if($(this).scrollTop() > 699) {
+        $('.navbar').addClass('opaque');
+    } else {
+        $('.navbar').removeClass('opaque');
+    }
 });
