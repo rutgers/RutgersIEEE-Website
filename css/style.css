@@ -58,29 +58,20 @@ header h1 {
     text-shadow: 2px 2px black;
 }
 
-.about-ieee {
-    background-color: #00626d;
+.about {
+    background-color: #000000;
     padding-top: 50px;
     padding-bottom: 50px;
     overflow: hidden;
 }
 
-.about-ieee img, .about-rutgers-ieee img {
-    max-width: 100%;
-}
-
-.about-rutgers-ieee {
-    background-color: #c1bbab;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: hidden;
-}
 
 header h1,
-.about-ieee h2,
-.about-ieee p,
-.about-rutgers-ieee h2,
-.about-rutgers-ieee p,
+.about h2,
+.about p,
+.project-teams p,
+.project-teams h2,
+.project-teams h3,
 .eboard h2,
 .eboard p,
 .contact h1,
@@ -91,14 +82,16 @@ header h1,
     font-family: "Droid Sans";
 }
 
-.about-ieee h2,
-.about-rutgers-ieee h2,
+.about h2,
+.about h2,
+.project-teams h2,
 .eboard h2,
 .contact h2 {
     font-size: 40px;
 }
 
-.about-ieee p,
+.about p,
+.project-teams p,
 .eboard p {
     font-size: 20px;
     text-align: left;
@@ -115,27 +108,30 @@ header h1,
 }
 
 .about-rutgers-ieee p {
-    font-size: 16px;
-    text-align: left;
-}
-
-.contact p {
     font-size: 15px;
     text-align: left;
 }
 
-.eboard {
-    background-color: rgb(0, 102, 161);
+.project-teams {
+    background-color: #d21034;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.eboard img {
+.eboard {
+    background-color: #848589;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .contact {
     background-color: #00626d;
     padding-top: 10px;
+}
+
+.contact p {
+    font-size: 15px;
+    text-align: left;
 }
 
 .copyright {
