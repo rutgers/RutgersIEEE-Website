@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="ieeeApp">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
 
     <!-- Droid Sans Font -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -72,43 +72,18 @@
     <section class="about" id="about">
         <div class="container-fluid text-center">
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 about-ieee">
-                    <h2 class="section-headers">About IEEE</h2>
+                <div class="col-lg-5 col-lg-offset-1 about-ieee" ng-controller="aboutIEEEController">
+                    <h2 class="section-headers"> {{header}} </h2>
                     <hr class="separator">
 
-                    <p>IEEE (pronounced Eye-Triple-E) is the world's largest technical professional organization dedicated to advancing technology for the benefit of
-                        humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences,
-                        technology standards, and professional and educational activities. IEEE is the trusted “voice” for engineering, computing and technology
-                        information around the globe.</p>
-
-                    <p>There are more than 420,000 IEEE members in more than 160 countries. IEEE publishes a third of the world’s technical literature in electrical
-                        engineering, computer science and electronics and is a leading developer of international standards that underpin many of today's telecommunications,
-                        information technology and power generation products and services.</p>
-                    <img src="assets/ieee-logo.png" class="center-block ieee-logo">
+                    <p ng-repeat="desc in descriptions">{{desc.description}}</p>
+                    <img src="public/img/ieee-logo.png" class="center-block ieee-logo">
                 </div>
-                <div class="col-lg-5 about-rutgers-ieee">
-                    <h2 class="section-headers">About Rutgers IEEE</h2>
+                <div class="col-lg-5 about-rutgers-ieee" ng-controller="aboutRutgersIEEEController">
+                    <h2 class="section-headers">{{header}}</h2>
                     <hr class="separator">
-                    <p>We are the student branch of the world’s largest professional association dedicated to advancing technological innovation. We are the future
-                        circuit designers, programmers, evil geniuses, and CEOs that want to see exciting technology happen now. By being a part of Rutgers IEEE,
-                        you will gain the technical and professional skills necessary to make these dreams a reality.</p>
 
-                    <p>We host a variety of technical and non-technical workshops to provide students the out-of-classroom technical and professional skills necessary
-                        to advance their education and career. Ever wondered how to use the Linux command line? Interested in Python or making cool websites for
-                        your hackathon projects? Need some tips on how to spice up your resume? Then come out to our workshops and learn how! For many of our successful
-                        workshops, we have also teamed up with other student organizations, such as the American Society of Mechanical Engineers (<a href="http://asme.rutgers.edu">ASME</a>),
-                        the Undergraduate Student Alliance of Computer Scientists (<a href="http://usacs.rutgers.edu">USACS</a>), and the Society of Women Engineers
-                        (
-                        <a href="http://swe.rutgers.edu">SWE</a>). So if you are interested, join our mailing list or come to one of our meetings! Despite our name,
-                        we are open to all majors and welcoming to great ideas!</p>
-
-                    <p>Besides our line of workshops, we also run four long-term project groups. These projects emphasize teamwork and require some time dedicated every
-                        week. However, they are also are an opportunity to contribute to a large-scale project outside of the classroom. You will also be able to
-                        showcase these projects to the School of Engineering and other students many times during the year and even compete against other schools.
-                        For this upcoming fall, we have four project groups running: Robotics, Quadcopter, Machine Learning, and Intelligent Sensor Networks. Please
-                        check out the pages for each project group if you are interested!</p>
-
-                    <p>Stay tuned for announcements and updates this summer! We'll see you in the fall!</p>
+                    <p ng-repeat="desc in descriptions">{{desc.description}}</p>
                 </div>
             </div>
         </div>
@@ -124,23 +99,23 @@
                     <h3>Robotics</h3>
                     <p>Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join
                         the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will
-                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter and Tachikoma.
-                        While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
+                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter
+                        and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
                     <h3>Quadcopter</h3>
                     <p>Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join
                         the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will
-                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter and Tachikoma.
-                        While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
+                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter
+                        and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
                     <h3>Machine Learning (ML)</h3>
                     <p>Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join
                         the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will
-                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter and Tachikoma.
-                        While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
+                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter
+                        and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
                     <h3>Intelligent Sensor Networks (ISN)</h3>
                     <p>Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join
                         the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will
-                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter and Tachikoma.
-                        While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
+                        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter
+                        and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!</p>
                 </div>
             </div>
         </div>
@@ -155,64 +130,64 @@
                     <hr class="separator">
                     <div class="row">
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Niral Shah</p>
                             <p>President</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Ravi Bhankharia</p>
                             <p>Vice President</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Jeremy Savarin</p>
                             <p>Treasurer/Webmaster</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Kristian Wu</p>
                             <p>Secretary</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Deepti Upmaka</p>
                             <p>Professional Relations Chair</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Sam Lotsvin</p>
                             <p>Quartermaster</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Samrat Darisipudi</p>
                             <p>EGC Representative</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Grisam Shah</p>
                             <p>Machine Learning Lead</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Shu Chen</p>
                             <p>Machine Learning Lead</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Ajay Srivastava</p>
                             <p>Robotics Team Lead</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Srihari Chekuri</p>
                             <p>Robotics Team Lead</p>
                         </div>
                         <div class="col-xs-4 col-md-2">
-                            <img src="assets/placeholder-img.png" class="img-responsive img-circle">
+                            <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>Michael Collins</p>
                             <p>Intelligent Sensor Networks Lead</p>
                         </div>
@@ -269,8 +244,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+    <script src="app/app.js"></script>
     <!-- Smooth Scroll -->
-    <script src="js/smooth-scroll.js"></script>
+    <script src="public/js/smooth-scroll.js"></script>
 </body>
 
 </html>

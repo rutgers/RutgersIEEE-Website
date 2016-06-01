@@ -19,7 +19,7 @@
 body {
     animation: fadeIn 3s;
     background-attachment: fixed;
-    background-image: url("../assets/ee-building.jpg");
+    background-image: url("../img/ee-building.jpg");
     background-size: cover;
 }
 
