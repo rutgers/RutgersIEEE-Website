@@ -4,8 +4,10 @@
 
 //About IEEE section controller
 function aboutIEEEController($scope) {
+    //Section header
     $scope.header = "About IEEE";
 
+    //Section descriptions (one entry per paragraph)
     $scope.descriptions = [{
         description: 'IEEE (pronounced Eye-Triple-E) is the world\'s largest \
         technical professional organization dedicated to advancing technology for the benefit of \
@@ -19,9 +21,12 @@ function aboutIEEEController($scope) {
     }];
 }
 
+//About Rutgers IEEE section controller
 function aboutRutgersIEEEController($scope) {
+    //Section header
     $scope.header = 'About Rutgers IEEE';
 
+    //Section descriptions (one entry per paragraph)
     $scope.descriptions = [{
         description: 'We are the student branch of the world’s largest professional association dedicated to advancing technological innovation. We are the future \
         circuit designers, programmers, evil geniuses, and CEOs that want to see exciting technology happen now. By being a part of Rutgers IEEE, \
@@ -44,8 +49,90 @@ function aboutRutgersIEEEController($scope) {
     }];
 }
 
+//Project Teams controller
+function projectTeamsController($scope) {
+    //Section header
+    $scope.header = 'Project Teams';
+
+    //Section descriptions (one entry per paragraph)
+    $scope.teams = [{
+        teamName: 'Robotics',
+        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
+            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
+            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
+            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+    }, {
+        teamName: 'Quadcopter',
+        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
+            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
+            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
+            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+    }, {
+        teamName: 'Machine Learning (ML)',
+        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
+            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
+            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
+            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+    }, {
+        teamName: 'Intelligent Sensor Networks (ISN)',
+        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
+            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
+            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
+            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+    }];
+}
+
+//E-board controller
+function eboardController($scope) {
+    //Section header
+    $scope.header = '2016-2017 E-Board'
+
+    //E-board members
+    $scope.membersTop = [{
+        name: 'Niral Shah',
+        position: 'President'
+    }, {
+        name: 'Ravi Bhankharia',
+        position: 'Vice President'
+    }, {
+        name: 'Jeremy Savarin',
+        position: 'Treasurer/Webmaster'
+    }, {
+        name: 'Kristian Wu',
+        position: 'Secretary'
+    }, {
+        name: 'Deepti Upmaka',
+        position: 'Professional Relations Chair'
+    }, {
+        name: 'Sam Lotsvin',
+        position: 'Quartermaster'
+    }];
+
+    $scope.membersBottom = [{
+        name: 'Samrat Darisipudi',
+        position: 'EGC Representative'
+    }, {
+        name: 'Grisam Shah',
+        position: 'Machine Learning Lead'
+    }, {
+        name: 'Shu Chen',
+        position: 'Machine Learning Lead'
+    }, {
+        name: 'Ajay Srivastava',
+        position: 'Robotics Team Lead'
+    }, {
+        name: 'Srihari Chekuri',
+        position: 'Robotics Team Lead'
+    }, {
+        name: 'Michael Collins',
+        position: 'Intelligent Sensor Networks Lead'
+    }];
+}
+
 //Declare module
 var app = angular.module('ieeeApp', []);
-
+//Set controllers
 app.controller('aboutIEEEController', aboutIEEEController);
 app.controller('aboutRutgersIEEEController', aboutRutgersIEEEController);
+app.controller('projectTeamsController', projectTeamsController);
+app.controller('eboardController', eboardController);

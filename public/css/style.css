@@ -58,13 +58,19 @@ header h1 {
     text-shadow: 2px 2px black;
 }
 
+
+.mail-button {
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+}
+
 .about {
-    background-color: #000000;
+    background-color: #d21034;
     padding-top: 50px;
     padding-bottom: 50px;
     overflow: hidden;
 }
-
 
 header h1,
 .about h2,
@@ -113,25 +119,30 @@ header h1,
 }
 
 .project-teams {
-    background-color: #d21034;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.eboard {
     background-color: #848589;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
+.project-teams p {
+    font-size: 15px;
+    text-align: left;
+}
+
+.eboard {
+    background-color: #000000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .contact {
-    background-color: #00626d;
+    background-color: #d21034;
     padding-top: 10px;
 }
 
 .contact p {
     font-size: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 .copyright {
