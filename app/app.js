@@ -57,16 +57,14 @@ function projectTeamsController($scope) {
     //Section descriptions (one entry per paragraph)
     $scope.teams = [{
         teamName: 'Robotics',
-        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
-            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
-            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
-            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+        description: 'Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
+        have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
+        and Tachikoma. This year, we will also be entering the VEX Robotics Competition as well!  While this the most intense project group, we are open to \
+        all skill levels and encourage you to check us out!'
     }, {
         teamName: 'Quadcopter',
-        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
-            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
-            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
-            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+        description: 'Here you will learn all the ins and outs of flying your own quadcopter! You will have the opportunity to build the frame of the quadcopter \
+        both with standard parts and 3D printed parts. With a solid foundation, you can then start wiring the different electronic components of the quadcopter'
     }, {
         teamName: 'Machine Learning (ML)',
         description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
