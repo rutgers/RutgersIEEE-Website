@@ -63,20 +63,19 @@ function projectTeamsController($scope) {
         all skill levels and encourage you to check us out!'
     }, {
         teamName: 'Quadcopter',
-        description: 'Here you will learn all the ins and outs of flying your own quadcopter! You will have the opportunity to build the frame of the quadcopter \
-        both with standard parts and 3D printed parts. With a solid foundation, you can then start wiring the different electronic components of the quadcopter'
+        description: 'The Autonomous Quadcopter Drone team focuses on giving students hand\'s on experience applying techniques from electrical engineering and \
+        computer science. Students will get a chance to build and fly a drone using artificial intelligence and computer vision concepts. Eventually students will \
+        be able to enter their drone into collegiate competitions!'
     }, {
         teamName: 'Machine Learning (ML)',
-        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
-            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
-            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
-            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+        description: 'The ML/AI team focuses on teaching and implementing the powerful concepts, methods, and tools from the rapidly growing fields of machine learning, artificial intelligence, and data \
+        analysis. The teaching heavy emphasizes both practical usage and fundamental understanding of ML techniques, covering topics from CS to math and statistics. These skills are strengthened through \
+        participation in ML/AI competitions, where we code implementations that solve real-world problems.'
     }, {
         teamName: 'Intelligent Sensor Networks (ISN)',
-        description: 'Interested in learning more about robotics? Want to build your own autonomous robots? Interested in competing against other schools? Then, join \
-            the IEEE Robotics Team! Here we will teach you from the ground up all the essential skills necessary to build an autonomous robot. You will \
-            have the opportunity to both create your own robot as well as contribute to some of the larger scale robotics projects, such as the Octocopter \
-            and Tachikoma. While this the most intense project group, we are open to all skill levels and encourage you to check us out!'
+        description: 'The ISN team is a new team that will begin in the Fall 2016 semester. Here we combine hardware and software skills to build a network of sensors that can be placed around \
+        any room to montior noise, ambient temperature, record video and even control lights. The goal is to monitor and control these sensors remotely through a web application on your \
+        desktop or smartphone. This workshop will be well rounded,  involving both full-stack web development for building the monitoring application as well as building and wiring the actual sensor network'
     }];
 }
 
@@ -111,19 +110,19 @@ function eboardController($scope) {
         position: 'EGC Representative'
     }, {
         name: 'Grisam Shah',
-        position: 'Machine Learning Lead'
+        position: 'ML Lead'
     }, {
         name: 'Shu Chen',
-        position: 'Machine Learning Lead'
+        position: 'ML Lead'
     }, {
         name: 'Ajay Srivastava',
-        position: 'Robotics Team Lead'
+        position: 'Robotics Lead'
     }, {
         name: 'Srihari Chekuri',
-        position: 'Robotics Team Lead'
+        position: 'Robotics Lead'
     }, {
         name: 'Michael Collins',
-        position: 'Intelligent Sensor Networks Lead'
+        position: 'ISN Lead'
     }];
 }
 

@@ -73,7 +73,7 @@
                     <h2 class="section-headers"> {{header}} </h2>
                     <hr class="separator">
                     <p ng-repeat="desc in descriptions">{{desc.description}}</p>
-                    <img src="public/img/ieee-logo.png" class="center-block ieee-logo">
+                    <img src="public/img/ieee-logo.png" class="center-block ieee-logo img-responsive">
                 </div>
                 <div class="col-lg-5 about-rutgers-ieee" ng-controller="aboutRutgersIEEEController">
                     <h2 class="section-headers">{{header}}</h2>
@@ -103,23 +103,32 @@
 
     <!-- E-Board -->
     <section class="eboard" id="eboard">
-        <div class="container-fluid text-center">
+        <div class="container-fluid text-center" ng-controller="eboardController">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center" ng-controller="eboardController">
+                <div class="col-lg-10 col-lg-offset-1 text-center" >
                     <h2 class="section-headers">{{header}}</h2>
                     <hr class="separator">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-xs-4 col-lg-2" ng-repeat="member in membersTop">
+                        <div class="member col-xs-6 col-sm-4 col-lg-2" ng-repeat="member in membersTop">
                             <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>{{member.name}}</p>
                             <p>{{member.position}}</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-xs-4 col-md-2" ng-repeat="member in membersBottom">
+                        <div class="member col-xs-6 col-sm-4 col-lg-2" ng-repeat="member in membersBottom">
                             <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                             <p>{{member.name}}</p>
                             <p>{{member.position}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,6 +146,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <h3>Mailing Address:</h3>
+                            <hr class="separator">
                             <p>Rutgers IEEE Student Branch
                                 <br> Electrical Engineering Building, Room EE-04
                                 <br> 98 Brett Road
@@ -144,6 +154,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h3>Social Media: </h3>
+                            <hr class="separator">
                             <ul class="list-inline">
                                 <li><a href="https://www.facebook.com/groups/rutgersieee/" class="btn-social btn-outline"><i class="fa fa-fw fa-5x fa-facebook"></i></a></li>
                                 <li><a href="https://github.com/rutgers" class="btn-social btn-outline"><i class="fa fa-fw fa-5x fa-github"></i></a></li>
@@ -152,6 +163,7 @@
                         </div>
                         <div class="col-lg-4">
                             <h3>Useful Links: </h3>
+                            <hr class="separator">
                             <p><a href="https://www.ieee.org">IEEE Main Website</a></p>
                             <p><a href="http://soe.rutgers.edu">School of Engineering</a></p>
                             <p><a href="http://www.rutgers.edu">Rutgers University</a></p>
