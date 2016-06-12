@@ -110,16 +110,16 @@ function eboardController($scope) {
         position: 'EGC Representative'
     }, {
         name: 'Grisam Shah',
-        position: 'ML Lead'
+        position: 'Machine Learning Lead'
     }, {
         name: 'Shu Chen',
         position: 'ML Lead'
     }, {
         name: 'Ajay Srivastava',
-        position: 'Robotics Lead'
+        position: 'Robotics Team Lead'
     }, {
         name: 'Srihari Chekuri',
-        position: 'Robotics Lead'
+        position: 'Robotics Team Lead'
     }, {
         name: 'Michael Collins',
         position: 'ISN Lead'
