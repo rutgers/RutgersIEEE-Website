@@ -68,13 +68,13 @@
     <section class="about" id="about">
         <div class="container-fluid text-center">
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 about-ieee" ng-controller="aboutIEEEController">
+                <div class="col-lg-5 col-lg-offset-1 about-ieee" ng-controller="AboutIEEEController">
                     <h2 class="section-headers"> {{header}} </h2>
                     <hr class="separator">
                     <p ng-repeat="desc in descriptions">{{desc.description}}</p>
                     <img src="public/img/ieee-logo.png" class="center-block ieee-logo img-responsive">
                 </div>
-                <div class="col-lg-5 about-rutgers-ieee" ng-controller="aboutRutgersIEEEController">
+                <div class="col-lg-5 about-rutgers-ieee" ng-controller="AboutRutgersIEEEController">
                     <h2 class="section-headers">{{header}}</h2>
                     <hr class="separator">
                     <p ng-repeat="desc in descriptions">{{desc.description}}</p>
@@ -85,7 +85,7 @@
 
     <!-- Project Teams -->
     <section class="project-teams" id="project-teams">
-        <div class="container-fluid text-center" ng-controller="projectTeamsController">
+        <div class="container-fluid text-center" ng-controller="ProjectTeamsController">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-headers">{{header}}</h2>
@@ -102,7 +102,7 @@
 
     <!-- E-Board -->
     <section class="eboard" id="eboard">
-        <div class="container-fluid text-center" ng-controller="eboardController">
+        <div class="container-fluid text-center" ng-controller="EboardController">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-headers">{{header}}</h2>
