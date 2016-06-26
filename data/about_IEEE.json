@@ -1,5 +1,8 @@
-[{
-    "description": "IEEE (pronounced Eye-Triple-E) is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities. IEEE is the trusted “voice” for engineering, computing and technology information around the globe."
-}, {
-    "description": "There are more than 420,000 IEEE members in more than 160 countries. IEEE publishes a third of the world’s technical literature in electrical engineering, computer science and electronics and is a leading developer of international standards that underpin many of today's telecommunications, information technology and power generation products and services."
-}]
+{
+    "header": "About IEEE",
+    "descriptions": [{
+        "description": "IEEE (pronounced Eye-Triple-E) is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities. IEEE is the trusted “voice” for engineering, computing and technology information around the globe."
+    }, {
+        "description": "There are more than 420,000 IEEE members in more than 160 countries. IEEE publishes a third of the world’s technical literature in electrical engineering, computer science and electronics and is a leading developer of international standards that underpin many of today's telecommunications, information technology and power generation products and services."
+    }]
+}

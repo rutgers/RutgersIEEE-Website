@@ -20,12 +20,22 @@ app.factory("ProjectTeams", ["$http", function ProjectTeams($http) {
     var projectTeams = {};
 
     //Load in project team info
-    projectTeams.teams = $http.get("data/project_teams.json");
+    projectTeams = $http.get("data/project_teams.json");
 
     return projectTeams;
 }]);
 
-app.directive('projectTeam', function() {
+//Set E-Board factory
+app.factory("EBoardInfo", ["$http", function EBoardInfo($http) {
+    var eBoardInfo = {};
+
+    //Load in E-board .json file
+    eBoardInfo = $http.get("data/eboard.json");
+
+    return eBoardInfo;
+}]);
+
+app.directive("projectTeam", function() {
     return {
         restrict: "E",
         templateUrl: "public/views/project-team.html"
@@ -34,78 +44,34 @@ app.directive('projectTeam', function() {
 
 //Set controllers
 app.controller("AboutIEEEController", ["$scope", "$http", "AboutInfo", function AboutIEEEController($scope, $http, AboutInfo) {
-    //Section header
-    $scope.header = "About IEEE";
-
-    //Set about IEEE descriptions
+    //Set about IEEE info
     AboutInfo.aboutIEEE.success(function(response) {
-        $scope.descriptions = response;
+        $scope.header = response.header;
+        $scope.descriptions = response.descriptions;
     });
 }]);
 
 app.controller("AboutRutgersIEEEController", ["$scope", "$http", "AboutInfo", function AboutRutgersIEEEController($scope, $http, AboutInfo) {
-    //Section header
-    $scope.header = "About Rutgers IEEE";
-
-    //Set about IEEE descriptions
+    //Set about Rutgers IEEE info
     AboutInfo.aboutRutgersIEEE.success(function(response) {
-        $scope.descriptions = response;
+        $scope.header = response.header;
+        $scope.descriptions = response.descriptions;
     });
 }]);
-
 
 app.controller("ProjectTeamsController", ["$scope", "$http", "ProjectTeams", function ProjectTeamsController($scope, $http, ProjectTeams) {
-    //Section header
-    $scope.header = "Project Teams";
-
-    //Set Project team descriptions
-    ProjectTeams.teams.success(function(response) {
-        $scope.teams = response;
+    //Set Project team info
+    ProjectTeams.success(function(response) {
+        $scope.header = response.header;
+        $scope.teams = response.teams;
     });
 }]);
 
-app.controller("EboardController", ["$scope", "$http", function EboardController($scope, $http) {
-    //Section header
-    $scope.header = "2016-2017 E-Board";
-
-    //E-board members
-    $scope.membersTop = [{
-        name: 'Niral Shah',
-        position: 'President'
-    }, {
-        name: 'Ravi Bhankharia',
-        position: 'Vice President'
-    }, {
-        name: 'Jeremy Savarin',
-        position: 'Treasurer/Webmaster'
-    }, {
-        name: 'Kristian Wu',
-        position: 'Secretary'
-    }, {
-        name: 'Deepti Upmaka',
-        position: 'Professional Relations Chair'
-    }, {
-        name: 'Sam Lotsvin',
-        position: 'Quartermaster'
-    }];
-
-    $scope.membersBottom = [{
-        name: 'Samrat Darisipudi',
-        position: 'EGC Representative'
-    }, {
-        name: 'Grisam Shah',
-        position: 'Machine Learning Lead'
-    }, {
-        name: 'Shu Chen',
-        position: 'ML Lead'
-    }, {
-        name: 'Ajay Srivastava',
-        position: 'Robotics Team Lead'
-    }, {
-        name: 'Srihari Chekuri',
-        position: 'Robotics Team Lead'
-    }, {
-        name: 'Michael Collins',
-        position: 'ISN Lead'
-    }];
+app.controller("EBoardController", ["$scope", "$http", "EBoardInfo", function EBoardController($scope, $http, EBoardInfo) {
+    //Set E-Board Info
+    EBoardInfo.success(function(response) {
+        $scope.header = response.header;
+        $scope.membersTop = response.membersTop;
+        $scope.membersBottom = response.membersBottom;
+    });
 }]);
