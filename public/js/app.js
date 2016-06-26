@@ -2,7 +2,17 @@
 //Author: Jeremy Savarin
 
 //Declare module
-var app = angular.module("ieeeApp", []);
+var app = angular.module("ieeeApp", ["ngRoute"]);
+
+app.config(["$routeProvider", function config($routeProvider) {
+    $routeProvider
+        .when("/blog", {
+            templateUrl: "public/views/blog.html"
+        })
+        .otherwise({
+            redirectTo: "/"
+        });
+}]);
 
 //Set AboutInfo factory
 app.factory("AboutInfo", ["$http", function AboutInfo($http) {
