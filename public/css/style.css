@@ -17,7 +17,11 @@
 }
 
 a {
-    color: black;
+    color: white;
+}
+
+a:hover {
+    color: #0B5172;
 }
 
 body {
@@ -25,27 +29,16 @@ body {
     background: #006699;
 }
 
-.navbar .nav > li > a {
-    color: white;
-}
-
 .navbar {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+    background-color: black;
     font-family: "Quicksand";
     font-size: 20px;
     text-shadow: 2px 2px black;
-    transition: background-color 1s ease 0s;
 }
 
-.navbar.opaque {
-    background-color: black;
-    transition: background-color 1s ease 0s;
-}
-
-.navbar .navbar-brand {
-    color: white;
-    font-size: 30px;
+.ieee-logo {
+    max-width: 150%;
+    max-height: 150%;
 }
 
 header {
@@ -63,6 +56,7 @@ header h1 {
     font-weight: bolder;
     font-size: 50px;
     text-shadow: 2px 2px black;
+    opacity: 2.0;
 }
 
 .mail-button {
@@ -70,7 +64,7 @@ header h1 {
 }
 
 .about {
-    background-image: linear-gradient(#d21034, #848589);
+    background-color: #0B5172;
     padding-top: 30px;
     padding-bottom: 30px;
     overflow: hidden;
@@ -102,36 +96,20 @@ header h1,
 }
 
 .about p,
+.about-rutgers-ieee p
 .project-teams p,
 .eboard p {
     font-size: 20px;
-    text-align: left;
 }
 
 .contact h3 {
     weight: bold;
 }
 
-.ieee-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-rutgers-ieee p {
-    font-size: 15px;
-    text-align: left;
-}
-
 .project-teams {
-    background-image: linear-gradient(#848589, #000000);
+    background-color: #000000;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-.project-teams p {
-    font-size: 15px;
-    text-align: left;
 }
 
 .project-teams h3,
@@ -140,7 +118,7 @@ header h1,
 }
 
 .eboard {
-    background-image: linear-gradient(#000000, #d21034);
+    background-color: #0B5172;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -166,7 +144,7 @@ header h1,
 }
 
 .contact {
-    background-color: #d21034;
+    background-color: black;
     padding-top: 10px;
 }
 
@@ -177,6 +155,7 @@ header h1,
 
 .copyright {
     background: black;
+    border-top: 1px solid white;
     color: white;
     padding: 10px;
 }
