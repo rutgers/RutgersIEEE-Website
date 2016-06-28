@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="ieeeApp">
-
+<html lang="en" ng-app="ieeeApp" ng-strict-di>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,12 +17,13 @@
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
 
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     </head>
 
     <!-- Body -->
-
     <body data-spy="scroll" data-target=".navbar">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -58,7 +58,7 @@
         <header class="greeting" id="greeting">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 intro-text">
+                    <div class="col-md-12 intro-text wow fadeInRight">
                         <h1>Welcome to the Rutgers IEEE Student Branch!</h1>
                         <a href="#" class="btn btn-primary mail-button" role="button"><i class="fa fa-fw fa-envelope"></i>&nbsp;Join our mailing list!</a>
                     </div>
@@ -68,19 +68,19 @@
 
         <!-- About IEEE-->
         <section class="about" id="about">
-            <div class="container-fluid">
+            <div class="container-fluid wow fadeInLeft" ng-controller="AboutController">
                 <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 about-ieee" ng-controller="AboutIEEEController">
+                    <div class="col-lg-10 col-lg-offset-1 about-ieee">
                         <h2>ABOUT</h2>
                         <hr class="separator">
-                        <h2 class="section-headers"> {{header}} </h2>
-                        <p ng-repeat="desc in descriptions">{{desc.description}}</p>
+                        <h2 class="section-headers"> {{aboutIEEEHeader}} </h2>
+                        <p ng-repeat="desc in aboutIEEEDescriptions">{{desc.description}}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 about-rutgers-ieee" ng-controller="AboutRutgersIEEEController">
-                        <h2 class="section-headers">{{header}}</h2>
-                        <p ng-repeat="desc in descriptions">{{desc.description}}</p>
+                    <div class="col-lg-10 col-lg-offset-1 about-rutgers-ieee">
+                        <h2 class="section-headers">{{aboutRutgersIEEEHeader}}</h2>
+                        <p ng-repeat="desc in aboutRutgersIEEEDescriptions">{{desc.description}}</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
 
         <!-- Project Teams -->
         <section class="project-teams" id="project-teams">
-            <div class="container-fluid" ng-controller="ProjectTeamsController">
+            <div class="container-fluid wow fadeInRight" ng-controller="ProjectTeamsController">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2 class="section-headers">{{header | uppercase}}</h2>
@@ -108,7 +108,7 @@
 
         <!-- E-Board -->
         <section class="eboard" id="eboard">
-            <div class="container-fluid" ng-controller="EBoardController">
+            <div class="container-fluid wow fadeInLeft" ng-controller="EBoardController">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2 class="section-headers">{{header | uppercase}}</h2>
@@ -142,7 +142,7 @@
 
         <!-- Contact Info -->
         <section class="contact" id="contact">
-            <div class="container-fluid">
+            <div class="container-fluid wow fadeInRight">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2 class="section-headers">CONTACT INFO</h2>
@@ -195,11 +195,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!-- AngularJS -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-
-        <!-- Custom AngularJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script>new WOW().init();</script>
+        <!-- Minified JS from all local JS files -->
         <script src="app/app.js"></script>
-        <!-- Smooth Scroll -->
-        <script src="public/js/smooth-scroll.js"></script>
+        <script src="app/about/about.module.js"></script>
+        <script src="app/about/about.controller.js"></script>
+        <script src="app/project-teams/project-teams.module.js"></script>
+        <script src="app/project-teams/project-teams.controller.js"></script>
+        <script src="app/project-teams/project-teams.directive.js"></script>
+        <script src="app/eboard/eboard.module.js"></script>
+        <script src="app/eboard/eboard.controller.js"></script>
+
     </body>
 
 </html>
