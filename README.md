@@ -1,7 +1,7 @@
 # Rutgers IEEE - Website
 
 ## Description
-Welcome to the [Rutgers IEEE](ieee.rutgers.edu) website! If you have any concerns regarding functionality, improvements to suggest, or glaring bugs to yell at me about, post them [here](https://github.com/JeremySavarin/RutgersIEEE-Website/issues).
+Welcome to the [Rutgers IEEE](ieee.rutgers.edu) website! If you have any concerns regarding functionality, improvements to suggest, or glaring bugs to yell at me about, post them [here](https://github.com/rutgers/RutgersIEEE-Website/issues).
 
 ## For Maintainers or Testers
 
@@ -12,7 +12,7 @@ If you would like to test out this website locally, do the following:
 2. Open up a terminal, and install [Gulp](http://gulpjs.com/):
     `npm install -g gulp`
 
-3. Clone the repository using `git clone https://github.com/JeremySavarin/RutgersIEEE-Website.git`.
+3. Clone the repository using `git clone https://github.com/rutgers/RutgersIEEE-Website.git`.
 
 4. Go into the directory: `cd RutgersIEEE-Website`
 
