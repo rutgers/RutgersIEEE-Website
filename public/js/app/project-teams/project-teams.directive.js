@@ -10,7 +10,7 @@
     function ProjectTeam() {
         return {
             restrict: "E",
-            templateUrl: "public/views/project-team.html"
+            templateUrl: "dist/views/project-team.html"
         };
     }
 })();

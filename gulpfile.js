@@ -31,7 +31,10 @@ var path = {
     css: [
         "./public/css/*.css"
     ],
-    assets: "./public/img/*"
+    assets: [
+        "./public/img/*",
+        "./public/views/*"
+    ]
 };
 
 //Set up server
@@ -72,15 +75,23 @@ gulp.task("scripts", function() {
 });
 
 //Move img folder
-gulp.task("move-assets", function() {
+gulp.task("move-img", function() {
     return gulp
-        .src(path.assets)
+        .src(path.assets[0])
         .pipe(gulp.dest("./dist/img"));
 });
 
+//Move img folder
+gulp.task("move-views", function() {
+    return gulp
+        .src(path.assets[1])
+        .pipe(gulp.dest("./dist/views"));
+});
+
+
 //Watch for changes
 gulp.task("watch", function() {
-    gulp.watch(path.scripts, ["lint", "scripts", ]);
+    gulp.watch(path.scripts, ["lint", "scripts"]);
 });
 
 //Clean files
@@ -89,5 +100,5 @@ gulp.task("clean", function() {
 });
 
 //Default tasks
-gulp.task("default", ["lint", "css", "scripts", "move-assets", "watch",
+gulp.task("default", ["lint", "css", "scripts", "move-img", "move-views", "watch",
     "connect"]);
