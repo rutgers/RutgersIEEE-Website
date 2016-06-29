@@ -3,9 +3,10 @@
 
 (function() {
     "use strict";
-    
+
     angular.module("ProjectTeams")
-        .controller("ProjectTeamsController", ["$scope", "$http", "ProjectTeams", ProjectTeamsController]);
+        .controller("ProjectTeamsController", ["$scope", "$http",
+            "ProjectTeams", ProjectTeamsController]);
 
     function ProjectTeamsController($scope, $http, ProjectTeams) {
         //Set Project team info

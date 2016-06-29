@@ -5,7 +5,8 @@
     "use strict";
 
     angular.module("About")
-        .controller("AboutController", ["$scope", "$http", "AboutInfo", AboutController]);
+        .controller("AboutController", ["$scope", "$http", "AboutInfo",
+            AboutController]);
 
     function AboutController($scope, $http, AboutInfo) {
         //Set about IEEE info

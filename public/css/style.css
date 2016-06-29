@@ -3,14 +3,13 @@
  * Custom stylesheet
  */
 
-
 /* Fade-in animation */
-
 @keyframes fadeIn {
     from {
         opacity: 0;
         background-color: black;
     }
+
     to {
         opacity: 1;
     }
@@ -70,34 +69,33 @@ header h1 {
     overflow: hidden;
 }
 
-header h1,
 .about h2,
 .about p,
-.project-teams p,
-.project-teams h2,
-.project-teams h3,
-.eboard h2,
-.eboard p,
 .contact h1,
 .contact h2,
 .contact h3,
-.contact p {
+.contact p,
+.eboard h2,
+.eboard p,
+.project-teams h2,
+.project-teams h3,
+.project-teams p,
+header h1 {
     color: white;
     font-family: "Quicksand";
 }
 
 .about h2,
 .about h2,
-.project-teams h2,
+.contact h2,
 .eboard h2,
-.contact h2 {
+.project-teams h2 {
     font-weight: bolder;
     font-size: 40px;
 }
 
 .about p,
-.about-rutgers-ieee p
-.project-teams p,
+.about-rutgers-ieee p .project-teams p,
 .eboard p {
     font-size: 20px;
 }
@@ -112,8 +110,8 @@ header h1,
     padding-bottom: 30px;
 }
 
-.project-teams h3,
-.contact h3 {
+.contact h3,
+.project-teams h3 {
     font-weight: bold;
 }
 

@@ -5,7 +5,8 @@
     "use strict";
 
     angular.module("EBoard")
-        .controller("EBoardController", ["$scope", "$http", "EBoardInfo", EBoardController]);
+        .controller("EBoardController", ["$scope", "$http", "EBoardInfo",
+            EBoardController]);
 
     function EBoardController($scope, $http, EBoardInfo) {
         //Set E-Board Info

@@ -12,7 +12,8 @@
 
         //Load in about info .json files
         aboutInfo.aboutIEEE = $http.get("data/about_IEEE.json");
-        aboutInfo.aboutRutgersIEEE = $http.get("data/about_RutgersIEEE.json");
+        aboutInfo.aboutRutgersIEEE = $http.get(
+            "data/about_RutgersIEEE.json");
 
         return aboutInfo;
     }

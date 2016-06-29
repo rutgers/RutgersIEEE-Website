@@ -3,7 +3,7 @@
 
 (function() {
     "use strict";
-    
+
     angular.module("ProjectTeams", [])
         .factory("ProjectTeams", ["$http", ProjectTeams]);
 
