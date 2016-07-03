@@ -22,18 +22,21 @@ function onError(err) {
 //Path to scripts
 var path = {
     scripts: [
-        "./public/js/app/app.js",
-        "./public/js/app/**/*.module.js",
-        "./public/js/app/**/*.controller.js",
-        "./public/js/app/**/*.directive.js",
-        "./public/js/*.js",
+        "./app/app.js",
+        "./app/app.config.js",
+        "./app/**/*.module.js",
+        "./app/**/*.controller.js",
+        "./app/**/*.directive.js",
     ],
     css: [
         "./public/css/*.css"
     ],
-    assets: [
+    html: [
+        "./index.html",
+        "./app/**/*.html"
+    ],
+    img: [
         "./public/img/*",
-        "./public/views/*"
     ]
 };
 
@@ -58,7 +61,7 @@ gulp.task("css", function() {
             keepBreaks: true
         }))
         .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("./dist/css"));
+        .pipe(gulp.dest("./public/css"));
 });
 
 //Minify JS files
@@ -71,34 +74,18 @@ gulp.task("scripts", function() {
             errorHandler: onError
         }))
         .pipe(uglify())
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(gulp.dest("./public/js"));
 });
-
-//Move img folder
-gulp.task("move-img", function() {
-    return gulp
-        .src(path.assets[0])
-        .pipe(gulp.dest("./dist/img"));
-});
-
-//Move img folder
-gulp.task("move-views", function() {
-    return gulp
-        .src(path.assets[1])
-        .pipe(gulp.dest("./dist/views"));
-});
-
 
 //Watch for changes
 gulp.task("watch", function() {
-    gulp.watch(path.scripts, ["lint", "scripts"]);
+    gulp.watch([path.scripts, path.css, path.html], ["lint", "css", "scripts"]);
 });
 
 //Clean files
 gulp.task("clean", function() {
-    del(["./dist/"]);
+    del(["./public/js/all.min.js", "./public/css/style.min.css"]);
 });
 
 //Default tasks
-gulp.task("default", ["lint", "css", "scripts", "move-img", "move-views", "watch",
-    "connect"]);
+gulp.task("default", ["lint", "css", "scripts", "watch", "connect"]);

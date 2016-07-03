@@ -6,12 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+         <base href="/">
         <title>Rutgers IEEE Student Branch</title>
 
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
             rel="stylesheet">
-        <link href="./dist/css/style.min.css" rel="stylesheet">
+        <link href="./public/css/style.min.css" rel="stylesheet">
 
         <!-- Droid Sans Font -->
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"
@@ -25,178 +27,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <!-- Body -->
-    <body data-spy="scroll" data-target=".navbar">
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header navbar-left">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#top">
-                        <img src="dist/img/ieee-logo.png" class="ieee-logo img-responsive">
-                    </a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#greeting">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#project-teams">Project Teams</a></li>
-                        <li><a href="#eboard">E-Board</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-        </nav>
-
-        <!-- Intro Image -->
-        <header class="greeting" id="greeting">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 intro-text wow fadeInRight">
-                        <h1>Welcome to the Rutgers IEEE Student Branch!</h1>
-                        <a href="#" class="btn btn-primary mail-button" role="button"><i class="fa fa-fw fa-envelope"></i>&nbsp;Join our mailing list!</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- About IEEE-->
-        <section class="about" id="about">
-            <div class="container-fluid wow fadeInLeft" ng-controller="AboutController">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 about-ieee">
-                        <h2>ABOUT</h2>
-                        <hr class="separator">
-                        <h2 class="section-headers"> {{aboutIEEEHeader}} </h2>
-                        <p ng-repeat="desc in aboutIEEEDescriptions">{{desc.description}}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 about-rutgers-ieee">
-                        <h2 class="section-headers">{{aboutRutgersIEEEHeader}}</h2>
-                        <p ng-repeat="desc in aboutRutgersIEEEDescriptions">{{desc.description}}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Teams -->
-        <section class="project-teams" id="project-teams">
-            <div class="container-fluid wow fadeInRight" ng-controller="ProjectTeamsController">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <h2 class="section-headers">{{header | uppercase}}</h2>
-                        <hr class="separator">
-                    </div>
-                </div>
-                <div class="row">
-                    <div ng-repeat="team in teams">
-                        <div class="clearfix" ng-if="$index % 2 == 0"></div>
-                        <div class="col-lg-5" ng-class="{'col-lg-offset-1': $index % 2 == 0}">
-                            <project-team></project-team>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- E-Board -->
-        <section class="eboard" id="eboard">
-            <div class="container-fluid wow fadeInLeft" ng-controller="EBoardController">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <h2 class="section-headers">{{header | uppercase}}</h2>
-                        <hr class="separator">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in membersTop">
-                                <img src="dist/img/placeholder-img.png" class="img-responsive img-circle">
-                                <p>{{member.name}}</p>
-                                <p>{{member.position}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in membersBottom">
-                                <img src="dist/img/placeholder-img.png" class="img-responsive img-circle">
-                                <p>{{member.name}}</p>
-                                <p>{{member.position}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Info -->
-        <section class="contact" id="contact">
-            <div class="container-fluid wow fadeInRight">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <h2 class="section-headers">CONTACT INFO</h2>
-                        <hr class="separator">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <h3>Mailing Address:</h3>
-                                <hr class="separator">
-                                <p>Rutgers IEEE Student Branch
-                                    <br> Electrical Engineering Building, Room EE-04
-                                    <br> 98 Brett Road
-                                    <br> Piscataway, NJ, 08854</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <h3>Social Media: </h3>
-                                <hr class="separator">
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/groups/rutgersieee/"
-                                            class="btn-social btn-outline"><i class="fa fa-fw fa-5x fa-facebook"></i></a></li>
-                                    <li>
-                                        <a href="https://github.com/rutgers" class="btn-social btn-outline"><i class="fa fa-fw fa-5x fa-github"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:rutgersieee@gmail.com" class="btn-social btn-outline"><i class="fa fa-fw fa-5x fa-envelope"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4">
-                                <h3>Useful Links: </h3>
-                                <hr class="separator">
-                                <p><a href="https://www.ieee.org">IEEE Main Website</a></p>
-                                <p><a href="http://soe.rutgers.edu">School of Engineering</a></p>
-                                <p><a href="http://www.rutgers.edu">Rutgers University</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Copyright -->
-        <footer class="copyright">
-            <div class="container-fluid text-center">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright <i class="fa fa-copyright"></i> 2016 Rutgers IEEE
-                            Student Branch. All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div ng-view></div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -204,11 +35,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!-- AngularJS -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+        <!-- WOWJS animations -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
         <script>
             new WOW().init();
         </script>
         <!-- Minified JS from all local JS files -->
-        <script src="dist/js/all.min.js"></script>
-    </body>
+        <script src="public/js/all.min.js"></script>
 </html>
