@@ -22,11 +22,12 @@ function onError(err) {
 //Path to scripts
 var path = {
     scripts: [
-        "./app/app.js",
-        "./app/app.config.js",
-        "./app/**/*.module.js",
-        "./app/**/*.controller.js",
-        "./app/**/*.directive.js",
+        "./client/app.js",
+        "./client/app.config.js",
+        "./client/**/*.module.js",
+        "./client/**/*.service.js",
+        "./client/**/*.controller.js",
+        "./client/**/*.directive.js",
     ],
     css: [
         "./public/css/*.css"
@@ -57,10 +58,10 @@ gulp.task("lint", function() {
 gulp.task("css", function() {
     return gulp
         .src(path.css)
+        .pipe(rename("style.min.css"))
         .pipe(cleanCSS({
             keepBreaks: true
         }))
-        .pipe(rename("style.min.css"))
         .pipe(gulp.dest("./public/css"));
 });
 

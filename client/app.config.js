@@ -10,7 +10,7 @@
     function RouteConfig($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "./app/home/home.html",
+                templateUrl: "./client/home/home.html",
             })
             .otherwise({
                 redirectTo: "/"
