@@ -2,52 +2,48 @@
  * Author: Jeremy Savarin
  * Custom stylesheet
  */
+ 
+ a {
+     color: white;
+ }
 
-a {
-    color: white;
-}
+ a:hover {
+     color: #0B5172;
+ }
 
-a:hover {
-    color: #0B5172;
-}
+ body {
+     background: #006699;
+ }
 
-body {
-    background: #006699;
-}
+ .navbar {
+     background-color: black;
+     font-family: "Quicksand";
+     font-size: 20px;
+     text-shadow: 2px 2px black;
+ }
 
-.navbar {
-    background-color: black;
-    font-family: "Quicksand";
-    font-size: 20px;
-    text-shadow: 2px 2px black;
-}
+ .ieee-logo {
+     max-width: 150%;
+     max-height: 150%;
+ }
 
-.ieee-logo {
-    max-width: 150%;
-    max-height: 150%;
-}
+ header {
+     background-attachment: fixed;
+     background-size: cover;
+     background-image: url("../img/ee-building.jpg");
+     background-position: 40% 0;
+     opacity: 0.65;
+     padding-top: 300px;
+     padding-bottom: 300px;
+     text-align: center;
+ }
 
-header {
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: url("../img/ee-building.jpg");
-    background-position: 40% 0;
-    opacity: 0.65;
-    padding-top: 300px;
-    padding-bottom: 300px;
-    text-align: center;
-}
-
-header h1 {
-    font-weight: bolder;
-    font-size: 50px;
-    text-shadow: 2px 2px black;
-    opacity: 2.0;
-}
-
-.mail-button {
-    font-size: 20px;
-}
+ header h1 {
+     font-weight: bolder;
+     font-size: 50px;
+     text-shadow: 2px 2px black;
+     opacity: 2.0;
+ }
 
 .about {
     background-color: #0B5172;
@@ -63,6 +59,7 @@ header h1 {
 .contact h2,
 .contact h3,
 .contact p,
+.contact address,
 .eboard h2,
 .eboard p,
 .project-teams h2,

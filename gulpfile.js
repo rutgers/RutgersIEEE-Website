@@ -30,7 +30,8 @@ var path = {
         "./client/**/*.directive.js",
     ],
     css: [
-        "./public/css/style.css"
+        "./public/css/style.css",
+        "./public/css/ml-button.css"
     ],
     html: [
         "./index.html",
@@ -58,7 +59,7 @@ gulp.task("lint", function() {
 gulp.task("css", function() {
     return gulp
         .src(path.css)
-        .pipe(rename("style.min.css"))
+        .pipe(concat("style.min.css"))
         .pipe(cleanCSS({
             keepBreaks: true
         }))

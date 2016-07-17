@@ -29,5 +29,4 @@ your browser.
 ## TODO
 
 * Add E-Board member pictures.
-* Link mailing list button to mailing list.
 * Add page for project team blogs.
