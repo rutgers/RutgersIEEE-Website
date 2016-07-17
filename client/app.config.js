@@ -5,9 +5,9 @@
     "use strict";
 
     angular.module("ieeeApp")
-        .config(["$stateProvider", "$urlRouterProvider", RouteConfig]);
+        .config(["$stateProvider", "$urlRouterProvider", StateConfig]);
 
-    function RouteConfig($stateProvider, $urlRouterProvider) {
+    function StateConfig($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
