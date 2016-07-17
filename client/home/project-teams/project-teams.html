@@ -1,0 +1,19 @@
+<!-- Project Teams -->
+<section class="project-teams" id="project-teams">
+    <div class="container-fluid wow fadeInRight">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2 class="section-headers">{{header | uppercase}}</h2>
+                <hr class="separator">
+            </div>
+        </div>
+        <div class="row">
+            <div ng-repeat="team in teams">
+                <div class="clearfix" ng-if="$index % 2 == 0"></div>
+                <div class="col-lg-5" ng-class="{'col-lg-offset-1': $index % 2 == 0}">
+                    <project-team></project-team>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

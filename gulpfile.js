@@ -30,7 +30,7 @@ var path = {
         "./client/**/*.directive.js",
     ],
     css: [
-        "./public/css/*.css"
+        "./public/css/style.css"
     ],
     html: [
         "./index.html",

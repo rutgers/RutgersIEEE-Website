@@ -4,6 +4,6 @@
 (function() {
     "use strict";
 
-    angular.module("ieeeApp", ["About", "ProjectTeams", "EBoard", "ngRoute",
-        "duScroll"]);
+    angular.module("ieeeApp", ["About", "ProjectTeams", "EBoard",
+        "duScroll", "angular-loading-bar", "ui.router"]);
 })();

@@ -5,17 +5,31 @@
     "use strict";
 
     angular.module("ieeeApp")
-        .config(["$routeProvider", "$locationProvider", RouteConfig]);
+        .config(["$stateProvider", "$urlRouterProvider", RouteConfig]);
 
-    function RouteConfig($routeProvider, $locationProvider) {
-        $routeProvider
-            .when("/", {
-                templateUrl: "./client/home/home.html",
-            })
-            .otherwise({
-                redirectTo: "/"
+    function RouteConfig($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
+
+        $stateProvider
+            .state("home", {
+                url: "/",
+                views: {
+                    "": {
+                        templateUrl: "./client/home/home.html"
+                    },
+                    "about@home": {
+                        templateUrl: "./client/home/about/about.html",
+                        controller: "AboutController"
+                    },
+                    "project-teams@home": {
+                        templateUrl: "./client/home/project-teams/project-teams.html",
+                        controller: "ProjectTeamsController"
+                    },
+                    "eboard@home": {
+                        templateUrl: "./client/home/eboard/eboard.html",
+                        controller: "EBoardController"
+                    }
+                }
             });
-
-        $locationProvider.html5Mode(true);
     }
 })();
