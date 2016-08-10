@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="ieeeApp" ng-strict-di>
+<html lang="en" ng-app="ieeeApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +9,8 @@
         <base href="/">
         <title>Rutgers IEEE Student Branch</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="./public/css/style.min.css" rel="stylesheet">
-        <link href="./public/css/ml-button.css" rel="stylesheet">
-
         <!-- Custom Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -31,24 +27,13 @@
     <!-- Different views -->
     <div ng-cloak ui-view></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
-    <!-- WOWJS animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <!-- Angular Loading Bar -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
-    <!-- Mailing list button -->
     <script type="text/javascript" src="//static.mailerlite.com/js/w/button.min.js?v1197c3725019f85c0a2c20559f609c04"></script>
     <script>
         new WOW().init();
     </script>
 
     <!-- Minified JS from all local JS files -->
+    <script src="public/js/vendor.min.js"></script>
     <script src="public/js/all.min.js"></script>
 </html>

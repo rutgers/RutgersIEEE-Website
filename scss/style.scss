@@ -2,7 +2,9 @@
  * Author: Jeremy Savarin
  * Custom stylesheet
  */
- 
+
+ @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
  a {
      color: white;
  }
