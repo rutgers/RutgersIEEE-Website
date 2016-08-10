@@ -9,33 +9,18 @@
             AboutController]);
 
     function AboutController($scope, $http, AboutService) {
-        $scope.aboutIEEEHeader = {};
-        $scope.aboutIEEEDescriptions = {};
-        $scope.aboutRutgersIEEEHeader = {};
-        $scope.aboutRutgersIEEEDescriptions = {};
-
-        getAboutIEEE();
-        getAboutRutgersIEEE();
+        $scope.aboutIEEEHeader = getAboutIEEE().header;
+        $scope.aboutIEEEDescriptions = getAboutIEEE().descriptions;
+        $scope.aboutRutgersIEEEHeader = getAboutRutgersIEEE().header;
+        $scope.aboutRutgersIEEEDescriptions = getAboutRutgersIEEE().descriptions;
 
         //Set info
         function getAboutIEEE() {
-            AboutService.getAboutIEEE()
-                .success(successCallback);
-
-                function successCallback(data) {
-                    $scope.aboutIEEEHeader = data.header;
-                    $scope.aboutIEEEDescriptions = data.descriptions;
-                }
+            return AboutService.getAboutIEEE();
         }
 
         function getAboutRutgersIEEE() {
-            AboutService.getAboutRutgersIEEE()
-                .success(successCallback);
-
-                function successCallback(data) {
-                    $scope.aboutRutgersIEEEHeader = data.header;
-                    $scope.aboutRutgersIEEEDescriptions = data.descriptions;
-                }
+            return AboutService.getAboutRutgersIEEE();
         }
     }
 })();
