@@ -18,16 +18,13 @@
                         templateUrl: "./client/home/home.html"
                     },
                     "about@home": {
-                        templateUrl: "./client/home/about/about.html",
-                        controller: "AboutController"
+                        template: "<ru-ieee-about></ru-ieee-about>",
                     },
                     "project-teams@home": {
-                        templateUrl: "./client/home/project-teams/project-teams.html",
-                        controller: "ProjectTeamsController"
+                        template: "<ru-ieee-project-teams></ru-ieee-project-teams>"
                     },
                     "eboard@home": {
-                        templateUrl: "./client/home/eboard/eboard.html",
-                        controller: "EBoardController"
+                        template: "<ru-ieee-eboard></ru-ieee-eboard>"
                     }
                 }
             });

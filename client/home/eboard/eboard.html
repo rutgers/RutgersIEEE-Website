@@ -3,14 +3,14 @@
     <div class="container-fluid wow fadeInLeft">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h2 class="section-headers">{{header | uppercase}}</h2>
+                <h2 class="section-headers">{{$ctrl.header | uppercase}}</h2>
                 <hr class="separator">
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in membersTop">
+                    <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in $ctrl.membersTop">
                         <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                         <p>{{member.name}}</p>
                         <p>{{member.position}}</p>
@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in membersBottom">
+                    <div class="member col-xs-6 col-sm-4 col-lg-2 text-center" ng-repeat="member in $ctrl.membersBottom">
                         <img src="public/img/placeholder-img.png" class="img-responsive img-circle">
                         <p>{{member.name}}</p>
                         <p>{{member.position}}</p>
