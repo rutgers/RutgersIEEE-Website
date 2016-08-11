@@ -50,7 +50,8 @@ var path = {
 gulp.task("connect", ["bundle:js:app", "bundle:js:vendor", "move:html"],
     function() {
         connect.server({
-            root: "dist"
+            root: "dist",
+            livereload: true
         });
     });
 
@@ -66,7 +67,9 @@ gulp.task("lint:js", function() {
 gulp.task("lint:scss", function() {
     return gulp
         .src(path.scss)
-        .pipe(sassLint())
+        .pipe(sassLint({
+            configFile: "./config/.sass-lint.yml"
+        }))
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError());
 });
@@ -80,11 +83,13 @@ gulp.task("minify:scss", ["lint:scss"], function() {
             loadMaps: true
         }))
         .pipe(concat("style.css"))
+        .pipe(cleanCSS())
         .pipe(rename({
             suffix: ".min"
         }))
         .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("./dist/css"));
+        .pipe(gulp.dest("./dist/css"))
+        .pipe(connect.reload());
 });
 
 //Bundle app JS files
@@ -104,7 +109,8 @@ gulp.task("bundle:js:app", ["lint:js"], function() {
             suffix: ".min"
         }))
         .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(gulp.dest("./dist/js"))
+        .pipe(connect.reload());
 });
 
 //Bundle vendor JS files
@@ -124,32 +130,36 @@ gulp.task("bundle:js:vendor", ["lint:js"], function() {
             suffix: ".min"
         }))
         .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(gulp.dest("./dist/js"))
+        .pipe(connect.reload());
 });
 
 //Move index.html
 gulp.task("move:index", function() {
     return gulp.src("./index.html")
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist"))
+        .pipe(connect.reload());
 });
 
 //Move views html files
 gulp.task("move:html", ["move:index", "move:img"], function() {
     return gulp.src(path.html)
-        .pipe(gulp.dest("dist/views"));
+        .pipe(gulp.dest("dist/views"))
+        .pipe(connect.reload());
 });
 
 //Move images
 gulp.task("move:img", function() {
     return gulp.src(path.img)
-        .pipe(gulp.dest("dist/img"));
-})
+        .pipe(gulp.dest("dist/img"))
+        .pipe(connect.reload());
+});
 
 //Watch for changes
 gulp.task("watch", function() {
     gulp.watch(path.appScripts, ["bundle:js:app"]);
     gulp.watch(path.vendorScripts, ["bundle:js:vendor"]);
-    gulp.watch(path.scss, ["minify:scss"]);
+    gulp.watch("./scss/**/*.scss", ["minify:scss"]);
     gulp.watch(path.html, ["move:html"]);
 });
 

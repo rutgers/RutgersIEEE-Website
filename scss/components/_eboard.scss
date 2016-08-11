@@ -1,0 +1,19 @@
+//_eboard.scss
+//Author: Jeremy Savarin
+
+.eboard {
+    @include ieee-content-block($ieee-darker-blue);
+}
+
+.member {
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.member img {
+    padding-bottom: 10px;
+}
+.member p {
+    padding-bottom: 10px;
+    word-wrap: normal;
+}
