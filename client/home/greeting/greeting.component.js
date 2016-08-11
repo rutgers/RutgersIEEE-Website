@@ -3,5 +3,5 @@
 
 module.exports = angular.module("Greeting", [])
     .component("ruIeeeGreeting", {
-        templateUrl: "client/home/greeting/greeting.component.html"
+        templateUrl: "views/home/greeting/greeting.component.html"
     });

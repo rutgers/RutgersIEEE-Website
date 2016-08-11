@@ -5,7 +5,7 @@ var ProjectTeamsService = require("./project-teams.service");
 
 module.exports = angular.module("ProjectTeams", [])
     .component("ruIeeeProjectTeams", {
-        templateUrl: "client/home/project-teams/project-teams.component.html",
+        templateUrl: "views/home/project-teams/project-teams.component.html",
         controller: ProjectTeamsController
     })
     .factory("ProjectTeamsService", ProjectTeamsService);

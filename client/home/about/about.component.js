@@ -5,7 +5,7 @@ var AboutService = require("./about.service");
 
 module.exports = angular.module("About", [])
     .component("ruIeeeAbout", {
-        templateUrl: "client/home/about/about.component.html",
+        templateUrl: "views/home/about/about.component.html",
         controller: AboutController
     })
     .factory("AboutService", AboutService);

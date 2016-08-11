@@ -5,7 +5,7 @@ var EBoardService = require("./eboard.service");
 
 module.exports = angular.module("EBoard", [])
     .component("ruIeeeEboard", {
-        templateUrl: "client/home/eboard/eboard.component.html",
+        templateUrl: "views/home/eboard/eboard.component.html",
         controller: EBoardController
     })
     .factory("EBoardService", EBoardService);

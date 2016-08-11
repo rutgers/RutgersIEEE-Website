@@ -5,7 +5,7 @@ var ContactService = require("./contact.service");
 
 module.exports = angular.module("Contact", [])
     .component("ruIeeeContact", {
-        templateUrl: "client/home/contact/contact.component.html",
+        templateUrl: "views/home/contact/contact.component.html",
         controller: ContactController
     })
     .factory("ContactService", ContactService);

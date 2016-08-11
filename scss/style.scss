@@ -1,9 +1,8 @@
-/* style.css
- * Author: Jeremy Savarin
- * Custom stylesheet
- */
+//style.scss
+//Author: Jeremy Savarin
 
- @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+ @import "vendor";
+ @import "ml-button";
 
  a {
      color: white;

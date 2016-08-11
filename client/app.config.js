@@ -9,7 +9,7 @@ module.exports = function StateConfig($stateProvider, $urlRouterProvider) {
             url: "/",
             views: {
                 "": {
-                    templateUrl: "./client/home/home.html"
+                    templateUrl: "./views/home/home.html"
                 },
                 "greeting@home": {
                     template: "<ru-ieee-greeting></ru-ieee-greeting>"
