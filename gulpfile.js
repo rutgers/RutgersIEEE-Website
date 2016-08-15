@@ -45,6 +45,7 @@ var path = {
     ],
     img: [
         "./img/*",
+        "./favicon.ico"
     ]
 };
 

@@ -28,8 +28,7 @@ module.exports = function EBoardService() {
             }, {
                 "name": "Sam Lotsvin",
                 "position": "Quartermaster"
-            }],
-            "membersBottom": [{
+            }, {
                 "name": "Samrat Darisipudi",
                 "position": "EGC Representative"
             }, {
