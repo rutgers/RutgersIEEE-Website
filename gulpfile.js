@@ -9,6 +9,7 @@ var cleanCSS = require("gulp-clean-css");
 var concat = require("gulp-concat");
 var connect = require("gulp-connect");
 var del = require("del");
+var gutil = require("gulp-util");
 var jshint = require("gulp-jshint");
 var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
@@ -18,6 +19,7 @@ var source = require("vinyl-source-stream");
 var sourcemaps = require("gulp-sourcemaps");
 var stylish = require("jshint-stylish");
 var uglify = require("gulp-uglify");
+var watchify = require("watchify");
 
 //Error handler
 function onError(err) {
@@ -92,12 +94,25 @@ gulp.task("minify:scss", ["lint:scss"], function() {
         .pipe(connect.reload());
 });
 
-//Bundle app JS files
-gulp.task("bundle:js:app", ["lint:js"], function() {
-    return browserify({
-            entries: "./client/app.js",
-            debug: true
-        })
+var watchifyBundleApp = watchify(browserify({
+    entries: "./client/app.js",
+    debug: true
+}));
+
+var watchifyBundleVendor = watchify(browserify({
+    entries: "./client/vendor.js",
+    debug: true
+}));
+
+gulp.task("bundle:js:app", ["lint:js"], bundleApp);
+gulp.task("bundle:js:vendor", ["lint:js"], bundleVendor);
+watchifyBundleApp.on("update", bundleApp);
+watchifyBundleApp.on("log", gutil.log);
+watchifyBundleVendor.on("update", bundleVendor);
+watchifyBundleVendor.on("log", gutil.log);
+
+function bundleApp() {
+    return watchifyBundleApp
         .bundle()
         .pipe(source("app.js"))
         .pipe(buffer())
@@ -111,14 +126,10 @@ gulp.task("bundle:js:app", ["lint:js"], function() {
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./dist/js"))
         .pipe(connect.reload());
-});
+}
 
-//Bundle vendor JS files
-gulp.task("bundle:js:vendor", ["lint:js"], function() {
-    return browserify({
-            entries: "./client/vendor.js",
-            debug: true
-        })
+function bundleVendor() {
+    return watchifyBundleVendor
         .bundle()
         .pipe(source("vendor.js"))
         .pipe(buffer())
@@ -132,7 +143,11 @@ gulp.task("bundle:js:vendor", ["lint:js"], function() {
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./dist/js"))
         .pipe(connect.reload());
-});
+}
+//Bundle app JS files
+gulp.task("bundle:js:app", ["lint:js"], bundleApp);
+//Bundle vendor JS files
+gulp.task("bundle:js:vendor", ["lint:js"], bundleVendor);
 
 //Move index.html
 gulp.task("move:index", function() {
@@ -161,6 +176,7 @@ gulp.task("watch", function() {
     gulp.watch(path.vendorScripts, ["bundle:js:vendor"]);
     gulp.watch("./scss/**/*.scss", ["minify:scss"]);
     gulp.watch(path.html, ["move:html"]);
+    gulp.watch(path.img, ["move:img"]);
 });
 
 //Clean files
