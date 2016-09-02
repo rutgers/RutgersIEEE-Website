@@ -1,0 +1,54 @@
+<form name="signup" novalidate>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$ctrl.cancel()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title">Sign up for our mailing list for news and updates!</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group" ng-class="{'has-error': signup.firstName.$touched && signup.firstName.$invalid }">
+            <label>First name:
+            </label>
+            <input class="form-control" type="text" name="firstName" ng-model="$ctrl.signupForm.firstName" placeholder="First name" required>
+        </div>
+        <div class="help-block" ng-messages="signup.firstName.$error" ng-if="signup.firstName.$touched">
+            <p ng-message="required">First name is required.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': signup.lastName.$touched && signup.lastName.$invalid }">
+            <label>Last name:
+            </label>
+            <input class="form-control" type="text" name="lastName" ng-model="$ctrl.firstName.lastName" placeholder="Last name" required>
+        </div>
+        <div class="help-block" ng-messages="signup.lastName.$error" ng-if="signup.lastName.$touched">
+            <p ng-message="required">Last name is required.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': signup.email.$touched && signup.email.$invalid }">
+            <label>E-mail address:
+            </label>
+            <input class="form-control" type="email" name="email" ng-model="$ctrl.signupForm.email" placeholder="E-mail address" required>
+        </div>
+        <div class="help-block" ng-messages="signup.email.$error" ng-if="signup.email.$touched">
+            <p ng-message="required">E-mail is required.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': signup.major.$touched && signup.major.$invalid }">
+            <label>Major:
+            </label>
+            <input class="form-control" type="text" name="major" ng-model="$ctrl.signupForm.major" placeholder="Major" required>
+        </div>
+        <div class="help-block" ng-messages="signup.major.$error" ng-if="signup.major.$touched">
+            <p ng-message="required">Major is required.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': signup.graduatingYear.$touched && signup.graduatingYear.$invalid }">
+            <label>Graduating year:
+            </label>
+            <input class="form-control" type="text" name="graduatingYear" ng-model="$ctrl.signupForm.graduatingYear" placeholder="Graduating year" required>
+        </div>
+        <div class="help-block" ng-messages="signup.graduatingYear.$error" ng-if="signup.graduatingYear.$touched">
+            <p ng-message="required">Graduating year is required.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-disabled="signup.$invalid" ng-click="$ctrl.submit()">Signup!</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</form>

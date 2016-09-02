@@ -43,9 +43,12 @@ var path = {
     html: [
         "./client/**/*.html"
     ],
-    img: [
-        "./img/*",
+    index: [
+        "./index.html",
         "./favicon.ico"
+    ],
+    img: [
+        "./img/*"
     ]
 };
 
@@ -152,7 +155,7 @@ gulp.task("bundle:js:vendor", ["lint:js"], bundleVendor);
 
 //Move index.html
 gulp.task("move:index", function() {
-    return gulp.src("./index.html")
+    return gulp.src(path.index)
         .pipe(gulp.dest("dist"))
         .pipe(connect.reload());
 });
