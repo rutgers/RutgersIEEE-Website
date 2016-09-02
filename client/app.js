@@ -9,7 +9,7 @@ var projectTeams = require("./home/project-teams/project-teams.component");
 var eboard = require("./home/eboard/eboard.component");
 
 angular.module("ieeeApp", [greeting.name, about.name, projectTeams.name, eboard
-        .name, contact.name, "duScroll", "angular-loading-bar", "ngMessages", "ngTouch",
+        .name, contact.name, "duScroll", "angular-loading-bar", "ngFlash", "ngMessages", "ngTouch",
         "ui.bootstrap", "ui.router"
     ])
     .config(["$stateProvider", "$urlRouterProvider", stateConfig]);

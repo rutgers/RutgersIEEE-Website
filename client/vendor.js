@@ -7,6 +7,7 @@ require("angular-messages");
 require("angular-touch");
 
 //Vendor
+require("angular-flash-alert");
 require("angular-ui-bootstrap");
 require("angular-ui-router");
 require("angular-loading-bar");

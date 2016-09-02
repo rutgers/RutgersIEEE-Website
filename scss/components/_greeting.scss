@@ -9,11 +9,21 @@ header {
     padding-top: 22%;
     padding-bottom: 22%;
     text-align: center;
+
+    h1 {
+        @extend %ieee-font;
+        font-weight: bolder;
+        font-size: 350%;
+        text-shadow: 2px 2px black;
+    }
 }
 
-header h1 {
+
+.signup {
+    background-color: $ieee-black;
     @extend %ieee-font;
-    font-weight: bolder;
-    font-size: 350%;
-    text-shadow: 2px 2px black;
+}
+
+.help-block {
+    @extend %ieee-font;
 }
