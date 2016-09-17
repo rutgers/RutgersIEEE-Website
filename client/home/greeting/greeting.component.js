@@ -68,7 +68,7 @@ function SignupController($http) {
         };
 
         $http.post(
-                "https://app.mailerlite.com/api/v1/subscribers/4095018/?apiKey=" +
+                "https://app.mailerlite.com/api/v1/subscribers/4665263/?apiKey=" +
                 API_KEY, data, config)
             .then(function(res) {
                 vm.close({
